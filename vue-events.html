@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Punchbag Game | Vue Js</title>
+</head>
+<body>
+	<div class="container text-center" id="app">
+		<!-- bag image -->
+		<div id="bag" v-bind:class="{burst:ended}"></div>
+
+
+		<!-- bag health -->
+		<div id="bag-health">
+			<div v-bind:style="{width:health + '%'}"></div>
+		</div>
+
+
+		<!-- game control -->
+		<div id="controls">
+			<button v-on:click="punch" v-show="!ended">Punch</button>
+			<button v-on:click="restart">Restart</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
